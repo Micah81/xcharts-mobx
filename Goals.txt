@@ -1,0 +1,32 @@
+I want to add a new field, "Saving Goal", and
+have it show up on the chart.
+
+There are
+actions,
+components,
+containers,
+reducers.
+
+1. Create an action. type: ADD_SAVING_GOAL.
+2. Added the HTML to Home.js for this new field.
+3. In Calculation.js, added this data to the chart.
+4. Added ADD_SAVING_GOAL reducers.
+5. Moved savinggoals default data to src/index.js
+Done!
+-----------------------------------------------
+
+New goal:
+A. Create a button
+B. onClick = (1) get chart data ; (2) record vote
+
+-A-
+1.
+
+-B-
+--------------------------
+New goal:
+A. Create a line chart
+B. Load it with the API data
+
+2a. Create this new chart component.
+2c. Add the HTML to Home.js for this new chart component.
