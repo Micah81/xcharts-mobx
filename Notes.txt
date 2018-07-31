@@ -1,0 +1,9 @@
+Adding a button.
+
+1. Go to the home page, or wherever the HTML will go, and add the html, or as much as you can.
+You will need to add a container and the html.
+
+2. Create the container. The container tells the HTML how to render the button. Be sure to import it into Home.
+Use the container in the html.
+
+3. In the HTML, you also have to call a function that fires an ACTION. So, create the action.

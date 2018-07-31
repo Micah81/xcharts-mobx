@@ -13,8 +13,14 @@ const addSaving = (value) => ({
   value
 });
 
+const updateInstrAction = (value) => ({
+  type: 'UPDATE_INSTR',
+  value
+})
+
 export default {
     addIncome,
     addCost,
-    addSaving
+    addSaving,
+    updateInstrAction
 };

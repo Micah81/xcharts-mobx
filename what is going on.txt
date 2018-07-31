@@ -1,0 +1,62 @@
+FILES USED
+
+src/index
+
+reducers/index
+
+components/Home
+components/Chart
+components/AddForm (button onsubmit)
+
+containers/AddValue (displays button)
+containers/Calculation
+---------------------------
+git clone https://github.com/KillerCodeMonkey/reactjs-redux-chartjs.git chartx-mobx
+
+src/index
+> (1) reducers/index
+> (2) components/Root > components/Home:
+      (2a) > containers/AddValue
+
+	(2ab)(called in the html) > components/AddForm (onsubmit)
+
+      (2b) > action (called in the html) -- travels through Calculation --
+           (2b1)> Chart ... displays chart
+           (2b2)> connect > mobx > reducers
+> (3) creates store with default data.
+
+
+--------------------------------------------------
+FILES TO CREATE / UPDATE
+
+src/index [done] (1)
+
+reducers/index
+reducers/UpdateChart
+
+components/Home [done] (2)
+<Instr_container action="updateInstrAction" value="WMT" ></Instr_container>
+Action: 'UPDATE_INSTR'
+
+
+components/UpdateChartButton (button onsubmit)
+
+containers/Instr_container.js [done] (3)
+containers/UpdateChartValue (displays button)
+containers/UpdateChartCalculation
+
+
+------
+What is happening:
+
+src/index
+> (1) reducers/index [done]
+> (2) components/Root > components/Home: [done]
+      (2a) > containers/InstrContainer [done]
+	              > UpdateChartValue (f) [done]
+	              > components/UpdateChartButton [done for now]
+      (2b) > containers/UpdateChartCalculation [create]
+           (2b1) > action (called in the html) [done]
+           (2b2) > Chart ... displays chart [just alert for now: done]
+           (2b3) > connect > mobx > reducers > store (state) [done!]
+> (3) creates store with default data. [add default data for this, do last to avoid error]
