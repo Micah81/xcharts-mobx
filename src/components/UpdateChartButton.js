@@ -1,11 +1,22 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import * as api from '../utils/api';
 
 let UpdateChartButton = (value) => {
   return (
     <div>
-      <button onClick={() => {console.log(value.value)}}>Update Chart Symbol</button>
+      <button onClick={() => updChart(value)}>
+        Update Chart Symbol
+      </button>
     </div>
   )
 }
+
+function updChart(value){
+  let instr = value.value
+  console.log(instr)
+  //api.fetchChartData(instr)
+  console.log('fetchChartData is disabled')
+}
+
 
 export default UpdateChartButton;
