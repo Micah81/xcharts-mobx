@@ -1,7 +1,5 @@
 import React from 'react';
 import * as api from '../utils/api';
-import * as creds from '../utils/robinhood/credentials'
-import * as ts from '../utils/robinhood/topStocks';
 
 let UpdateChartButton = (value) => {
   return (
@@ -20,8 +18,9 @@ function updChart(value){
 
   //api.fetchChartData(instr)
   console.log('fetchChartData is disabled')
+  // add chart data to state
 
-  ts.TopStocks(creds.credentials)
+  // Record vote here  ...
 
 }
 
