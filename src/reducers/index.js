@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { firebaseReducer } from 'react-redux-firebase';
 import incomes from './incomes';
 import costs from './costs';
 import savings from './savings';
@@ -8,7 +9,8 @@ const dashboardApp = combineReducers({
   incomes,
   costs,
   savings,
-  instrumentUpdates
+  instrumentUpdates,
+  firebase: firebaseReducer
 });
 
 export default dashboardApp;

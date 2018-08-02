@@ -2,11 +2,17 @@ import React from 'react';
 import AddValue from '../containers/AddValue';
 import Calculation from '../containers/Calculation';
 import InstrContainer from '../containers/Instr_container';
+import { connect } from 'react-redux'
+import { compose } from 'redux'
+import { firebaseConnect } from 'react-redux-firebase'
+import LoginPage from './Login'
+
+
 
 // new container, symbolsContainer
-    import * as creds from '../utils/robinhood/credentials';
-    import * as ts from '../utils/robinhood/topStocks';
-    ts.TopStocks(creds.credentials);
+    // import * as creds from '../utils/robinhood/credentials';
+    // import * as ts from '../utils/robinhood/topStocks';
+    // ts.TopStocks(creds.credentials);
 // new action ...  (determines active symbol)
 // which calls a new reducer, symbolsReducer (adds active symbol to state)
 // update 'WMT' in HTML to be the [active symbol].
@@ -16,6 +22,7 @@ import InstrContainer from '../containers/Instr_container';
 
 const Home = () => (
     <div>
+    <LoginPage />
         <div style={{
             width: "40%",
             float: "left"
