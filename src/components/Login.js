@@ -4,6 +4,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { firebaseConnect, isLoaded, isEmpty } from 'react-redux-firebase'
 // import GoogleButton from 'react-google-button' // optional
+import * as anon from './anonSymbols';
 
 export const LoginPage = ({ firebase, auth }) => (
   <div >
@@ -19,7 +20,7 @@ export const LoginPage = ({ firebase, auth }) => (
         !isLoaded(auth)
         ? <span>Loading...</span>
         : isEmpty(auth)
-          ? <span>Not Authed</span>
+          ? anon.anonSymbols()      //<span>Not Authed</span>
           : <pre>{JSON.stringify(auth, null, 2)}</pre>
       }
     </div>

@@ -20,6 +20,8 @@ function updChart(value){
   console.log('fetchChartData is disabled')
   // add chart data to state
 
+  
+
   // Record vote here  ...
 
 }
