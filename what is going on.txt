@@ -64,20 +64,24 @@ src/index
 -------------------
 
 When the button is clicked:
-- the stock data updates 
+- the stock data updates
 - the stock symbol is passed and available
 
-Also, currently in Home.js (it does not belong there), the TopStocks function is called and returns today's top 10 stocks. This should be loaded into an array of stock symbols to cycle through for the user. 
+Also, currently in Home.js (it does not belong there), the TopStocks function is called and returns today's top 10 stocks. This should be loaded into an array of stock symbols to cycle through for the user.
 
 ----------------------
-I want a person to be able to vote on a few charts without having to sign up. The app will have to know whether the person is signed in, so that needs to come after adding Firebase. The anon user's votes can be stored locally. 
+I want a person to be able to vote on a few charts without having to sign up. The app will have to know whether the person is signed in, so that needs to come after adding Firebase. The anon user's votes can be stored locally.
 
-When the person is signed in, reference the user's array of stocks when voting. 
+When the person is signed in, reference the user's array of stocks when voting.
 
-Todo: Add firebase with react-redux-firebase. 
+Todo: Add firebase with react-redux-firebase. [done]
 
-
-
-
-
-
+Todo: Pass the symbols array to state.
+> (1) reducers/index
+> (2) components/Root > components/Home
+      > (2a - not logged in) > TopStocks > anonSymbolsArray
+      > containers/ChartTemplate
+          (2b1) > action (called in html)
+          (2b2) > Chart
+          (2bc) > connect > redux > reducers > store/state
+> (3) Add default chart data to the store.
