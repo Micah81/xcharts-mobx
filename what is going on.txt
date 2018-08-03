@@ -77,11 +77,12 @@ When the person is signed in, reference the user's array of stocks when voting.
 Todo: Add firebase with react-redux-firebase. [done]
 
 Todo: Pass the symbols array to state.
-> (1) reducers/index
-> (2) components/Root > components/Home
-      > (2a - not logged in) > TopStocks > anonSymbolsArray
-      > containers/ChartTemplate
-          (2b1) > action (called in html)
-          (2b2) > Chart
-          (2bc) > connect > redux > reducers > store/state
-> (3) Add default chart data to the store.
+src/index:
+  > (1) reducers/index
+  > (2) components/Root > components/Home
+        > (2a - not logged in) > TopStocks > anonSymbolsArray [do]
+        > (2b) containers/ChartTemplate  [do]
+            (2b1) > action (called in html)  [do]
+            (2b2) > Chart  [do]
+            (2bc) > connect > redux > reducers > store/state [do]
+  > (3) Add default chart data to the store. [do]
